@@ -1,5 +1,5 @@
 #!/bin/bash
-BIND_VERSION="9-9-8-p4"
+BIND_VERSION="9-10-4-p2"
 BIND_PATH="/opt/bind"
 TEMP_PATH="/tmp/bind"
 export DEBIAN_FRONTEND=noninteractive
