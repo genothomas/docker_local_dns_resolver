@@ -1,5 +1,5 @@
 #!/bin/bash
-BIND_VERSION="9-10-4-p2"
+BIND_VERSION="9.10.3-P4"
 BIND_PATH="/opt/bind"
 TEMP_PATH="/tmp/bind"
 export DEBIAN_FRONTEND=noninteractive
@@ -21,7 +21,7 @@ apt-get autoremove -qq -y
 apt-get autoclean -qq
 mkdir -p "${BIND_PATH}"
 mkdir -p "${TEMP_PATH}"
-curl -o "${TEMP_PATH}.tgz" "https://www.isc.org/downloads/file/bind-${BIND_VERSION}/?version=tar-gz"
+curl -o "${TEMP_PATH}.tgz" "ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/bind-${BIND_VERSION}.tar.gz"
 cd "${TEMP_PATH}"
 tar -zxf "${TEMP_PATH}.tgz" --strip-components 1
 ./configure --prefix="${BIND_PATH}" --disable-linux-caps && make && make install
