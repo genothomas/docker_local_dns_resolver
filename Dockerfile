@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 COPY /build /opt/build
 RUN /bin/bash /opt/build/scripts/setup.sh
 COPY /config/named /opt/bind/etc
